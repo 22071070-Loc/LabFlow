@@ -1,5 +1,5 @@
 # LabFlow (Lab & Equipment Manager)
-Web Final Project
+Website Final Project
 
 ## 1. Project Introduction
 
