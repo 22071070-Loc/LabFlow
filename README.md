@@ -1,4 +1,4 @@
-# Lab & Equipment Manager 
+# Lab & Equipment Manager - MVC PHP
 
 A PHP MVC web application for managing university lab equipment, borrowing requests, check-in/check-out records, maintenance schedules, damage reports, and penalty payments.
 
