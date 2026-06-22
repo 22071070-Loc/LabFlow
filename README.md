@@ -2,7 +2,7 @@
 
 A PHP MVC web application for managing university lab equipment, borrowing requests, check-in/check-out records, maintenance schedules, damage reports, and penalty payments.
 
-## Run with Laragon
+## Run with Laragon/XAMPP
 
 1. Copy the `lab_equipment_manager` folder to `C:\laragon\www\`.
 2. Start Laragon Apache/Nginx and MySQL.
