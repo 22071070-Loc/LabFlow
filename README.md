@@ -1,50 +1,58 @@
-# LabFlow (Lab & Equipment Manager)
-Website Final Project
+# Lab & Equipment Manager - MVC PHP
 
-## 1. Project Introduction
+A PHP MVC web application for managing university lab equipment, borrowing requests, check-in/check-out records, maintenance schedules, damage reports, and penalty payments.
 
-**Lab & Equipment Manager** is a web-based system designed to manage practical laboratory rooms and equipment in a university environment. The system supports the management of lab assets, equipment borrowing, check-in/check-out records, maintenance schedules, damage reports, and penalty payments.
+## Run with Laragon
 
-This project is developed for the course **INS3064 - Multimedia Design and Web Development**. The main purpose of the system is to help lab administrators, technicians, and students manage equipment usage more efficiently and reduce manual tracking errors.
+1. Copy the `lab_equipment_manager` folder to `C:\laragon\www\`.
+2. Start Laragon Apache/Nginx and MySQL.
+3. Open `http://localhost/lab_equipment_manager/`.
+4. The app imports `database/lab_equipment_manager.sql` automatically if the database does not exist.
 
-## 2. Project Objectives
+## Default Accounts
 
-The system aims to:
+Password for existing demo users: `123456`
 
-- Manage departments, laboratory rooms, equipment categories, suppliers, and equipment.
-- Allow students to submit equipment borrowing requests.
-- Allow administrators or technicians to approve or reject borrowing requests.
-- Track equipment check-out and check-in records.
-- Manage maintenance and calibration schedules.
-- Record maintenance logs after each maintenance activity.
-- Report damaged or lost equipment.
-- Calculate and manage penalty payments when equipment is damaged or lost.
-- Maintain clear relationships between all database entities.
+- Admin: `khanh.nh@is-vnu.edu.vn`
+- Technician: `mai.ht@is-vnu.edu.vn`
+- Student: `anh.nm230104@students.is-vnu.edu.vn`
 
-## 3. Main Users
+## Self Registration
 
-The system includes three main user roles:
+Students and technicians can register without a registration code. Student accounts must provide a Student ID, and students log in using Student ID + password. Admin and technician accounts log in using email + password.
 
-| Role | Description |
-|---|---|
-| Admin | Manages users, labs, equipment, requests, and overall system data |
-| Student | Creates equipment borrowing requests and tracks request status |
-| Technician | Handles equipment check-out/check-in, maintenance logs, and damage reports |
+Available unused demo codes:
 
-## 4. Technology Stack
+- Student: `SV240912`, `SV241018`, `SV241126`
+- Technician: `TECH-ITSS-081`, `TECH-ITSS-088`
 
-| Component | Technology |
-|---|---|
-| Backend | PHP |
-| Frontend | HTML, CSS, JavaScript |
-| Database | MySQL / MariaDB |
-| Local Server | XAMPP |
-| Database Tool | phpMyAdmin |
-| Version Control | Git / GitHub |
+Admin can manage registration codes from the sidebar.
 
-## 5. Database Overview
+## Main Modules
 
-The database is named:
+- Departments
+- Users
+- Registration Codes
+- Labs
+- Equipment Categories
+- Suppliers
+- Equipment
+- Borrow Requests
+- Borrow Records
+- Maintenance Schedules
+- Maintenance Logs
+- Damage Reports
+- Penalty Payments
 
-```sql
-lab_equipment_manager
+## Main Business Rules
+
+- Student and technician self-registration does not require a registration code. Student accounts must provide a unique Student ID.
+- Duplicate user email and student ID are blocked.
+- Equipment can only be borrowed when its status is `available`.
+- Expected return time must be later than start time.
+- Overlapping borrow requests for the same equipment are blocked.
+- Approving a request, check-out, check-in, damaged return, and maintenance actions update related records and equipment status.
+
+
+## UI/CSS Note
+This version includes an inline CSS fallback in the PHP views. The interface will still load correctly even when Laragon uses `localhost`, `.test`, `:8888`, or a different document root.
