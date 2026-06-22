@@ -1,4 +1,4 @@
-# Lab & Equipment Manager - MVC PHP
+# Lab & Equipment Manager 
 
 A PHP MVC web application for managing university lab equipment, borrowing requests, check-in/check-out records, maintenance schedules, damage reports, and penalty payments.
 
@@ -9,22 +9,10 @@ A PHP MVC web application for managing university lab equipment, borrowing reque
 3. Open `http://localhost/lab_equipment_manager/`.
 4. The app imports `database/lab_equipment_manager.sql` automatically if the database does not exist.
 
-## Default Accounts
-
-Password for existing demo users: `123456`
-
-- Admin: `khanh.nh@is-vnu.edu.vn`
-- Technician: `mai.ht@is-vnu.edu.vn`
-- Student: `anh.nm230104@students.is-vnu.edu.vn`
 
 ## Self Registration
 
 Students and technicians can register without a registration code. Student accounts must provide a Student ID, and students log in using Student ID + password. Admin and technician accounts log in using email + password.
-
-Available unused demo codes:
-
-- Student: `SV240912`, `SV241018`, `SV241126`
-- Technician: `TECH-ITSS-081`, `TECH-ITSS-088`
 
 Admin can manage registration codes from the sidebar.
 
